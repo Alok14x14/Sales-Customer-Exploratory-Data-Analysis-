@@ -1,3 +1,5 @@
+-- From Staff table
+
 #1.) How many staff do we have in the company? 
 SELECT COUNT(DISTINCT MatriculeNo) AS StaffNumber
 FROM stafftable;
@@ -21,7 +23,9 @@ ORDER BY age DESC;
 #5.) What is the Average age of Peter and Nina?
 SELECT AVG(age) AS AverageAge
 FROM stafftable
-WHERE StaffName="Nina" OR StaffName = "Peter";
+WHERE StaffName="Nina" OR StaffName = "Peter";\
+
+-- From Customer table
 
 #1.) How many customers do we have?
 SELECT COUNT(CustomerCode) AS CustomerCount
@@ -53,6 +57,8 @@ SELECT CustomerCountry,ROUND(AVG(Age),2) AS AverageAge
 FROM customertable
 GROUP BY CustomerCountry
 ORDER BY CustomerCountry;
+
+-- From Both tav=bles joined
 
 #1.) What is the total profit we made?
 SELECT SUM(Profit) AS TotalProfit
